@@ -19,6 +19,12 @@ The project follows a complete data-analysis workflow:
 
 ---
 
+## Project Presentation
+
+📊 **[View Internship Project Presentation](./Acer_Portfolio_Analysis_Presentation.pptx)**
+
+The presentation provides an executive overview of the project, including the business problem, data workflow, analytical framework, key findings, recommendations, and project contribution.
+
 ## Project Highlights
 
 | Metric | Result |
