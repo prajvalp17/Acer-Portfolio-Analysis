@@ -19,6 +19,29 @@ The project follows a complete data-analysis workflow:
 
 ---
 
+## Project Highlights
+
+| Metric | Result |
+|---|---:|
+| Product Records | 45 |
+| Suitcase Series | 6 |
+| Total Sales | 146 units |
+| Total Inventory | 4,328 units |
+| Inventory Value at MRP | ₹81.61M |
+| Top Series by Sales | Cassian — 53 units |
+| Top Marketplace | Flipkart — 104 units |
+
+### Key Takeaways
+
+- **Cassian** is the highest-selling series with **53 units sold**.
+- **Cassian and Romulus** together contribute **64.38% of total sales**.
+- **Flipkart** is the dominant marketplace, contributing **104 of 146 total sales**.
+- **Orion** has the lowest inventory level at **52 units** and should be monitored for replenishment.
+- **Romulus** has the highest inventory level at **1,700 units**, requiring inventory optimization.
+- Marketplace stock is heavily concentrated in **Flipkart**.
+
+---
+
 ## Tools & Technologies
 
 | Tool | Purpose |
@@ -64,10 +87,10 @@ Key activities included:
 
 - Organizing product and inventory data
 - Calculating sales and inventory metrics
-- Using formulas such as `SUMIF`, `SUMIFS` and `COUNTIF`
+- Using formulas such as `SUMIF`, `SUMIFS`, and `COUNTIF`
 - Creating Pivot Tables
 - Comparing marketplace performance
-- Preparing the dataset for Power BI, SQL and Python analysis
+- Preparing the dataset for SQL, Python, and Power BI analysis
 
 ---
 
@@ -98,7 +121,7 @@ The SQL implementation includes:
 - Series-level analysis
 - Marketplace-level analysis
 
-The SQL layer independently validates the business insights generated in Power BI.
+The SQL layer provides an independent validation of key sales, inventory, and marketplace metrics used in the dashboard.
 
 ---
 
@@ -129,6 +152,26 @@ The automated analysis generates:
 - Stock by marketplace
 - Stock-risk analysis
 - Series and marketplace charts
+
+---
+
+## Visual Analysis
+
+### Inventory by Suitcase Series
+
+![Inventory by Series](Python/outputs/charts/inventory_by_series.png)
+
+### Sales by Suitcase Series
+
+![Sales by Series](Python/outputs/charts/sales_by_series.png)
+
+### Sales by Marketplace
+
+![Sales by Marketplace](Python/outputs/charts/sales_by_marketplace.png)
+
+### Stock by Marketplace
+
+![Stock by Marketplace](Python/outputs/charts/stock_by_marketplace.png)
 
 ---
 
@@ -193,33 +236,11 @@ The dashboard enables users to evaluate the portfolio from both sales and invent
 
 ---
 
-## Project Structure
+## How to Run
 
-```text
-Portfolio/
-│
-├── README.md
-├── Portfolio.xlsx
-├── Portfolio.pbix
-│
-├── SQL/
-│   ├── 01_Database_Setup.sql
-│   ├── 02_Sales_Analysis.sql
-│   ├── 03_Inventory_Analysis.sql
-│   └── 04_Business_Insights.sql
-│
-└── Python/
-    ├── Acer_Analysis.py
-    │
-    └── outputs/
-        ├── inventory_by_series.csv
-        ├── sales_by_marketplace.csv
-        ├── sales_by_series.csv
-        ├── stock_by_marketplace.csv
-        ├── stock_risk_analysis.csv
-        │
-        └── charts/
-            ├── inventory_by_series.png
-            ├── sales_by_marketplace.png
-            ├── sales_by_series.png
-            └── stock_by_marketplace.png
+### Python Analysis
+
+Install the required libraries:
+
+```bash
+pip install pandas numpy matplotlib openpyxl
